@@ -1,0 +1,38 @@
+class Play:
+  def __init__(self, piedra, papel, tijeras, lagarto, spock):
+    self.piedra = piedra
+    self.papel = papel
+    self.tijeras = tijeras
+    self.lagarto = lagarto
+    self.spock = spock
+    self.player_1 = input("Ingresa el valor que elije el jugador 1: ")
+    self.player_2 = input("Ingresa el valor que elije el jugador 2: ")
+  
+  def players(self):
+    
+    if  self.player_1 == self.piedra and self.player_2 == self.tijeras or self.player_2 == self.lagarto:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.papel and self.player_2 == self.spock or self.player_2 == self.piedra:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.tijeras and self.player_2 == self.papel or self.player_2 == self.lagarto:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.lagarto and self.player_2 == self.papel or self.player_2 == self.spock:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.spock and self.player_2 == self.piedra or self.player_2 == self.tijeras:
+      print("Gana el primer jugador")
+
+    elif  self.player_2 == self.piedra and self.player_1 == self.tijeras or self.player_1 == self.lagarto:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.papel and self.player_1 == self.spock or self.player_1 == self.piedra:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.tijeras and self.player_1 == self.papel or self.player_1 == self.lagarto:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.lagarto and self.player_1 == self.papel or self.player_1 == self.spock:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.spock and self.player_1 == self.piedra or self.player_1 == self.tijeras:
+      print("Gana el segundo jugador")
+    else:
+      print("A ocurrido un problema con el sistema")
+
+result_to_play = Play("piedra", "papel", "tijeras", "lagarto", "spock")
+result_to_play.players()

@@ -1,0 +1,33 @@
+class Play:
+  def __init__(self):
+    self.options = ["piedra", "papel", "tijeras", "lagarto", "spock"]
+    self.player_1 = input("Ingresa el valor que elije el jugador 1: ")
+    self.player_2 = input("Ingresa el valor que elije el jugador 2: ")
+  
+  def players(self):
+    if  self.player_1 == self.options[0] and (self.player_2 == self.options[2] or self.player_2 == self.options[3]):
+      print("Gana el primer jugador")
+    elif self.player_1 == self.options[1] and self.player_2 == self.options[4] or self.player_2 == self.options[0]:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.options[2] and self.player_2 == self.options[1] or self.player_2 == self.options[3]:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.options[3] and self.player_2 == self.options[1] or self.player_2 == self.options[4]:
+      print("Gana el primer jugador")
+    elif self.player_1 == self.options[4] and self.player_2 == self.options[0] or self.player_2 == self.options[2]:
+      print("Gana el primer jugador")
+
+    elif  self.player_2 == self.options[0] and self.player_1 == self.options[2] or self.player_1 == self.options[3]:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.options[1] and self.player_1 == self.options[4] or self.player_1 == self.options[0]:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.options[2] and self.player_1 == self.options[1] or self.player_1 == self.options[3]:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.options[3] and self.player_1 == self.options[1] or self.player_1 == self.options[4]:
+      print("Gana el segundo jugador")
+    elif self.player_2 == self.options[4] and self.player_1 == self.options[0] or self.player_1 == self.options[2]:
+      print("Gana el segundo jugador")
+    else:
+      print("A ocurrido un problema con el sistema")
+
+result_to_play = Play()
+result_to_play.players()
