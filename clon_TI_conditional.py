@@ -13,3 +13,9 @@ class Segip:
 result_add_person = Segip()
 result_add_person.add_person()
 print(result_add_person.persons)
+
+segip = Segip()
+
+segip.add_person("Andy", 12345678)
+## No debe agregar a sofia ya que es duplicado
+segip.add_person("Sofia", 12345678)
